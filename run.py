@@ -28,4 +28,6 @@ def home():
     return render_template('index.html', countries=countries)
 
 if __name__ == '__main__':
-    app.run()
+    port = int(os.getenv('PORT', 8000))
+    print("Starting app on port %d" % port)
+app.run(debug=False, port=port, host='0.0.0.0')

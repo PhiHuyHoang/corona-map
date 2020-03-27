@@ -35,7 +35,7 @@ def secondhome():
     api_all = 'https://corona.lmao.ninja/all'
     r = requests.get(api_all)
     cases = r.json()
-    return render_template('index.html', countries=countries, cases=cases)
+    return render_template('index2.html', countries=countries, cases=cases)
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 8000))

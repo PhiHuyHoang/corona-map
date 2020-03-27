@@ -31,6 +31,6 @@ window.onresize = function(event) {
 
 function Redirect()
 {
-    window.location.href = "/home";
+    window.location.href = "/secondhome";
 }
 setTimeout('Redirect()', 2000);

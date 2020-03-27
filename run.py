@@ -27,6 +27,16 @@ def home():
     countries = r.json()
     return render_template('index.html', countries=countries)
 
+@app.route('/secondhome')
+def secondhome():
+    api_country = 'https://corona.lmao.ninja/countries'
+    r = requests.get(api_country)
+    countries = r.json()
+    api_all = 'https://corona.lmao.ninja/all'
+    r = requests.get(api_all)
+    cases = r.json()
+    return render_template('index.html', countries=countries, cases=cases)
+
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 8000))
     print("Starting app on port %d" % port)

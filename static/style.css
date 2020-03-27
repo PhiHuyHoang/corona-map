@@ -67,8 +67,8 @@ body {
   font-size: 0.75em;
 }
 .container .world {
-  height:100%;
-  width:100%;
+  width: 950px;
+  height: 600px;
   margin: 0 auto;
 }
 .clear {

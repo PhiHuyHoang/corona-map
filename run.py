@@ -20,15 +20,15 @@ def dated_url_for(endpoint, **values):
 def index():
     return render_template('flash.html')
 
-@app.route('/home')
-def home():
+@app.route('/secondhome')
+def hsecondhomeome():
     api = 'https://corona.lmao.ninja/countries'
     r = requests.get(api)
     countries = r.json()
     return render_template('index.html', countries=countries)
 
-@app.route('/secondhome')
-def secondhome():
+@app.route('/home')
+def home():
     api_country = 'https://corona.lmao.ninja/countries'
     r = requests.get(api_country)
     countries = r.json()
